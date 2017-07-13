@@ -38,7 +38,10 @@
 		<key>user_image</key>
 		<string>05.jpg</string>
 		<key>user_comment</key>
-		<string>푸덜 푸덜</string>
+		<string>리터럴이란 값 자체를 이야기함. 값이 변수나 상수에 담긴 형태가 아니라 그에 저장되는 값 자체를 리터럴이라고 함
+let size = &quot;180&quot; //size 변수에 180이라는 리터럴을 대입
+Int(size) //변수 사용하는 예
+Int(&quot;180&quot;) //리터럴을 사용하는 예</string>
 		<key>user_name</key>
 		<string>푸덜이</string>
 	</dict>
