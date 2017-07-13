@@ -25,10 +25,12 @@ class DataCentre {
         let bundlePath: String = Bundle.main.path(forResource: "telegram", ofType: "plist")! //번들에 있는 파일주소 가지고 옴.
         if let loadedArray = NSArray(contentsOfFile: bundlePath) as? [[String:String]] { //closure
             self.cellArray = loadedArray.map({ (dictionary: [String:String]) -> Telegram in  //.map으로 plist데이터로 cellArray 초기화
-                return Telegram.init(withDic: dictionary)                                    // for문으로 돌려서 해도 됨 .map 에 대해 확실히 공부하기
+                return Telegram.init(withDic: dictionary) //초기화(retuen에서)                                   // for문으로 돌려서 해도 됨 .map 에 대해 확실히 공부하기
             })
         }
     }
+    //filemanager 로 파일 존재여부 확인과정 있을경우? 없을경우?
+    
 }
 
 struct Telegram {
