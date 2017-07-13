@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HuW-uc-7No">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--고양이-->
+        <scene sceneID="bRU-K1-HUh">
+            <objects>
+                <viewController id="i1i-Pj-hSK" customClass="ViewController" customModule="CrazyScrollStackCombo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CHc-FI-j5T"/>
+                        <viewControllerLayoutGuide type="bottom" id="JaT-Hx-gIN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lRB-c2-EmD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngi-o6-eth">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSc-Vv-qv2" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1130.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="X82-dI-vgE" userLabel="Root Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="1130.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fno-VN-PRD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="fno-VN-PRD" secondAttribute="height" multiplier="4:3" id="LbF-FS-Dx4"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtA-A3-SbT">
+                                                        <rect key="frame" x="0.0" y="240" width="320" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="i1i-Pj-hSK" id="iLS-y0-42j"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvp-Ce-0bt" userLabel="Text Container">
+                                                        <rect key="frame" x="0.0" y="270" width="320" height="620.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSa-75-FBj">
+                                                                <rect key="frame" x="16" y="16" width="288" height="588.5"/>
+                                                                <mutableString key="text">고양이(cat)는 포유류에 속하는 동물이다. 일반적으로 "고양이"라 함은 인간에게 길들여진 집고양이(domestic cat)를 말한다. 야생고양이(wild cat)는 약 10만 년에서 7만 년 전부터 존재했다. 2007년 기준으로 최근의 연구에 따르면 길들여진 고양이의 기원은 약 1만 년 전 근동지방에서 스스로 숲 속을 나와 사람들이 모여사는 마을에 대담하게 정착하여 길들여진 5마리 정도의 아프리카들고양이(Felis silvestris lybica)로 추측된다.[3]  고양이는 인류로부터 오랫동안 반려동물로 사랑받아 왔다. 실례로 고대 이집트의 벽화에는 고양이를 새 사냥에 이용하는 그림이 있다. 동아시아의 십이지에는 포함되어 있지 않지만, 타이와 베트남에서는 토끼 대신 고양이가 십이지 중 하나이다.
+
+스핑크스처럼 털이 거의 없거나 맹크스처럼 꼬리가 없는 품종도 있다. 품종은 장모종, 중모종, 단모종으로 나뉘며. 단모종의 대표종은 아비니시안 고양이, 장모종의 대표종은 페르시안 고양이가 있다.
+
+애완견과는 달리, 옛 습성이 살아 있고 발톱을 숨길 수 있어서 쥐나 작은 새를 사냥할 수 있는데, 혀로 가시가 있는 뼈에 붙은 고기를 핥아서 먹을 수 있다.</mutableString>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <mutableString key="userLabel">고양이(cat)는 포유류에 속하는 동물이다. 일반적으로 "고양이"라 함은 인간에게 길들여진 집고양이(domestic cat)를 말한다. 야생고양이(wild cat)는 약 10만 년에서 7만 년 전부터 존재했다. 2007년 기준으로 최근의 연구에 따르면 길들여진 고양이의 기원은 약 1만 년 전 근동지방에서 스스로 숲 속을 나와 사람들이 모여사는 마을에 대담하게 정착하여 길들여진 5마리 정도의 아프리카들고양이(Felis silvestris lybica)로 추측된다.[3]  고양이는 인류로부터 오랫동안 반려동물로 사랑받아 왔다. 실례로 고대 이집트의 벽화에는 고양이를 새 사냥에 이용하는 그림이 있다. 동아시아의 십이지에는 포함되어 있지 않지만, 타이와 베트남에서는 토끼 대신 고양이가 십이지 중 하나이다.  스핑크스처럼 털이 거의 없거나 맹크스처럼 꼬리가 없는 품종도 있다. 품종은 장모종, 중모종, 단모종으로 나뉘며. 단모종의 대표종은 아비니시안 고양이, 장모종의 대표종은 페르시안 고양이가 있다.  애완견과는 달리, 옛 습성이 살아 있고 발톱을 숨길 수 있어서 쥐나 작은 새를 사냥할 수 있는데, 혀로 가시가 있는 뼈에 붙은 고기를 핥아서 먹을 수 있다.</mutableString>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" secondItem="pSa-75-FBj" secondAttribute="height" constant="32" id="4pi-qs-Imr"/>
+                                                            <constraint firstAttribute="trailing" secondItem="pSa-75-FBj" secondAttribute="trailing" constant="16" id="Gp0-DB-55F"/>
+                                                            <constraint firstItem="pSa-75-FBj" firstAttribute="leading" secondItem="Hvp-Ce-0bt" secondAttribute="leading" constant="16" id="f9g-66-a3n"/>
+                                                            <constraint firstItem="pSa-75-FBj" firstAttribute="top" secondItem="Hvp-Ce-0bt" secondAttribute="top" constant="16" id="ig5-k2-Aef"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zGF-Sz-Nzq">
+                                                        <rect key="frame" x="0.0" y="890.5" width="320" height="240"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="zGF-Sz-Nzq" secondAttribute="height" multiplier="4:3" id="cMi-UA-OKJ"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="fno-VN-PRD" firstAttribute="width" secondItem="X82-dI-vgE" secondAttribute="width" id="Fwz-qF-O3l"/>
+                                                    <constraint firstItem="zGF-Sz-Nzq" firstAttribute="width" secondItem="zGF-Sz-Nzq" secondAttribute="height" multiplier="4:3" id="f8n-da-w1h"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="X82-dI-vgE" secondAttribute="trailing" id="UBm-SA-e59"/>
+                                            <constraint firstAttribute="height" secondItem="X82-dI-vgE" secondAttribute="height" id="XFl-tu-Ndz"/>
+                                            <constraint firstItem="X82-dI-vgE" firstAttribute="top" secondItem="dSc-Vv-qv2" secondAttribute="top" id="oQE-qE-KC5"/>
+                                            <constraint firstItem="X82-dI-vgE" firstAttribute="leading" secondItem="dSc-Vv-qv2" secondAttribute="leading" id="oiS-ad-CUw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dSc-Vv-qv2" firstAttribute="leading" secondItem="ngi-o6-eth" secondAttribute="leading" id="9B5-H2-Rsq"/>
+                                    <constraint firstItem="dSc-Vv-qv2" firstAttribute="top" secondItem="ngi-o6-eth" secondAttribute="top" id="QMa-5l-cFh"/>
+                                    <constraint firstAttribute="bottom" secondItem="dSc-Vv-qv2" secondAttribute="bottom" id="Wg0-Po-OLk"/>
+                                    <constraint firstAttribute="trailing" secondItem="dSc-Vv-qv2" secondAttribute="trailing" id="hzP-9u-3mr"/>
+                                    <constraint firstItem="dSc-Vv-qv2" firstAttribute="width" secondItem="ngi-o6-eth" secondAttribute="width" id="wf9-V1-n8b"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ngi-o6-eth" firstAttribute="height" secondItem="lRB-c2-EmD" secondAttribute="height" id="1Qx-al-Qbp"/>
+                            <constraint firstItem="ngi-o6-eth" firstAttribute="width" secondItem="lRB-c2-EmD" secondAttribute="width" id="Am7-1U-JsA"/>
+                            <constraint firstItem="ngi-o6-eth" firstAttribute="centerY" secondItem="lRB-c2-EmD" secondAttribute="centerY" id="IIu-Nj-n1U"/>
+                            <constraint firstItem="ngi-o6-eth" firstAttribute="centerX" secondItem="lRB-c2-EmD" secondAttribute="centerX" id="eoY-yy-Kq5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="고양이" id="NVk-M3-fwm"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="ngi-o6-eth" id="NW1-ob-X7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0W-fH-lDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1168.8" y="17.541229385307346"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xov-3P-DXw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HuW-uc-7No" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YiM-5E-vpx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="i1i-Pj-hSK" kind="relationship" relationship="rootViewController" id="by4-Qy-Wxy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHf-dA-Xzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="17.541229385307346"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat.jpg" width="500" height="312"/>
+        <image name="cat2.jpg" width="1600" height="900"/>
+    </resources>
+</document>

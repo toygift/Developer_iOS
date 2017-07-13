@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>user_image</key>
+		<string>01.jpg</string>
+		<key>user_comment</key>
+		<string>오빠~~뭐해</string>
+		<key>user_name</key>
+		<string>이혜진</string>
+	</dict>
+	<dict>
+		<key>user_image</key>
+		<string>02.jpg</string>
+		<key>user_comment</key>
+		<string>아들 뭐하나?</string>
+		<key>user_name</key>
+		<string>아빠</string>
+	</dict>
+	<dict>
+		<key>user_image</key>
+		<string>03.jpg</string>
+		<key>user_comment</key>
+		<string>아들 밥 먹었어?</string>
+		<key>user_name</key>
+		<string>엄마</string>
+	</dict>
+	<dict>
+		<key>user_image</key>
+		<string>04.jpg</string>
+		<key>user_comment</key>
+		<string>오빠 사랑해~</string>
+		<key>user_name</key>
+		<string>찐이</string>
+	</dict>
+	<dict>
+		<key>user_image</key>
+		<string>05.jpg</string>
+		<key>user_comment</key>
+		<string>푸덜 푸덜</string>
+		<key>user_name</key>
+		<string>푸덜이</string>
+	</dict>
+</array>
+</plist>
