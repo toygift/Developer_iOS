@@ -39,7 +39,6 @@ class DataCenter {
             parsePersons(loadedArray)
         }
         try? fileManager.copyItem(atPath: bundlePath, toPath: docPath)
-        print(self.rawArray)
     }
     
     private func loadFromDoc() {
@@ -61,10 +60,15 @@ class DataCenter {
         nsArray.write(toFile: docPath, atomically: true)
     }
     
-    func addPerson(_ dict:[String:Any]) {
-        self.rawArray.append(Person.init(with: dict))
+    func add(person: Person) {
+        self.rawArray.append(person)
         self.saveToDoc()
     }
     
+    func remove(person: Person) {
+        self.rawArray.remove(
+            at: self.rawArray.index(of: person)!)
+        self.saveToDoc()
+    }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UINavigationBarDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -18,35 +18,18 @@ class AddViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     @IBAction func saveButtonTouched(_ sender: UIBarButtonItem) {
-        
         //지금까지 있는 사람 수를 새로운 아이디로 넘긴다.
-        DataCenter.shared.addPerson(["person_id":DataCenter.shared.dataArray.count, "name":nameTextField.text!, "gender":genderSegmentedControl.selectedSegmentIndex, "age":Int(ageTextField.text!)!, "phone_number":phoneNumberTextField.text!])
-        
-        self.navigationController?.popViewController(animated: true)
-        
+        DataCenter.shared.add(person: Person.init(name: nameTextField.text!, gender: Gender(rawValue: genderSegmentedControl.selectedSegmentIndex)!, age: Int(ageTextField.text!)!, phoneNumber: phoneNumberTextField.text!))
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelButtonTouched(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
 }
