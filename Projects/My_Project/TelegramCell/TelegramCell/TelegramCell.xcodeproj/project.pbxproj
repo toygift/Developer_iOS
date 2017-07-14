@@ -72,14 +72,14 @@
 			isa = PBXGroup;
 			children = (
 				3F33AF261F17A02100CF7B13 /* AppDelegate.swift */,
-				3F33AF281F17A02100CF7B13 /* ViewController.swift */,
 				3F33AF2A1F17A02100CF7B13 /* Main.storyboard */,
-				3F33AF471F17A81900CF7B13 /* TelegramTableViewCell.swift */,
 				3F33AF2D1F17A02100CF7B13 /* Assets.xcassets */,
 				3F33AF2F1F17A02100CF7B13 /* LaunchScreen.storyboard */,
 				3F33AF321F17A02100CF7B13 /* Info.plist */,
 				3F33AF381F17A04800CF7B13 /* telegram.plist */,
 				3F33AF451F17A1A900CF7B13 /* DataCentre.swift */,
+				3F33AF281F17A02100CF7B13 /* ViewController.swift */,
+				3F33AF471F17A81900CF7B13 /* TelegramTableViewCell.swift */,
 			);
 			path = TelegramCell;
 			sourceTree = "<group>";

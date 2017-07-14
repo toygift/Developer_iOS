@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GGJ-fp-Wsq" id="BOU-MU-sbf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-Cx-XQc">
@@ -49,6 +49,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4A-bc-GLE">
                                                     <rect key="frame" x="8" y="8" width="80" height="71"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                             </subviews>
@@ -74,7 +75,9 @@
                             <constraint firstItem="2rH-e9-DvB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="z4N-KQ-W61"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Telegram" id="zPb-pu-LNB"/>
+                    <navigationItem key="navigationItem" title="Telegram" id="zPb-pu-LNB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XjK-B6-o3a"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

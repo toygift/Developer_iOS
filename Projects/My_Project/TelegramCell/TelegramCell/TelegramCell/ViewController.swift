@@ -29,8 +29,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let data = DataCentre.shered.cellData
         cell.userImage.setImage(UIImage(named: data[indexPath.row].image), for: UIControlState.normal)
-        cell.userName.text = data[indexPath.row].name
-        cell.userComment.text = data[indexPath.row].comment
+//        cell.userName.text = data[indexPath.row].name
+//        cell.userComment.text = data[indexPath.row].comment
+        cell.twitData = DataCentre.shered.cellData[indexPath.row]
+        
         
         return cell
     }
