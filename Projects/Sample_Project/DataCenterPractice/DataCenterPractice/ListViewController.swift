@@ -16,8 +16,6 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private var currentDataArray: [Person]!
     
-    @IBOutlet weak var tableViewSourceSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
 
     
     @IBAction func segmentChanged(_ sender: UISegmentedControl) {
@@ -25,7 +23,10 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.reloadData()
         
     }
-
+    
+    @IBOutlet weak var tableViewSourceSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         filterData()
@@ -37,12 +38,12 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         filterData()
         self.tableView.reloadData()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   //tableview
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentDataArray.count
     }
@@ -52,9 +53,7 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let item: Person = currentDataArray[indexPath.row]
         
-        //textLabel
         cell.textLabel?.text = item.name
-        //detailTextLabel
         cell.detailTextLabel?.text = item.phoneNumber
         
         
@@ -73,5 +72,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         })
     }
-  
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

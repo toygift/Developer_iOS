@@ -24,7 +24,6 @@ struct Person {
     init(with dictionary:[String:Any]) {
         self.id = dictionary["person_id"] as! Int
         self.name = dictionary["name"] as! String
-        print(dictionary["name"])
         self.gender = Gender.init(rawValue: dictionary["gender"] as! Int)!
         self.age = dictionary["age"] as! Int
         self.phoneNumber = dictionary["phone_number"] as! String

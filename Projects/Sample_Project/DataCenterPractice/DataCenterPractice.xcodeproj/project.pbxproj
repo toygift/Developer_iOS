@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F538A221F0EAE98000528DA /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F538A211F0EAE98000528DA /* SettingViewController.swift */; };
 		B94D59FE1F065D36006C3AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94D59FD1F065D36006C3AA7 /* AppDelegate.swift */; };
 		B94D5A031F065D36006C3AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94D5A011F065D36006C3AA7 /* Main.storyboard */; };
 		B94D5A051F065D36006C3AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94D5A041F065D36006C3AA7 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F538A211F0EAE98000528DA /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		B94D59FA1F065D36006C3AA7 /* DataCenterPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenterPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94D59FD1F065D36006C3AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B94D5A021F065D36006C3AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 				B94D5A0F1F065D49006C3AA7 /* Person.swift */,
 				B94D5A111F065E44006C3AA7 /* Person.plist */,
 				B94D5A011F065D36006C3AA7 /* Main.storyboard */,
-				3F538A211F0EAE98000528DA /* SettingViewController.swift */,
 				B94D5A041F065D36006C3AA7 /* Assets.xcassets */,
 				B94D5A061F065D36006C3AA7 /* LaunchScreen.storyboard */,
 				B94D5A091F065D36006C3AA7 /* Info.plist */,
@@ -111,7 +108,7 @@
 				TargetAttributes = {
 					B94D59F91F065D36006C3AA7 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = FNEH2787UY;
+						DevelopmentTeam = 8KDMCH8V2F;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -158,7 +155,6 @@
 				B94D5A141F0662BA006C3AA7 /* DataCenter.swift in Sources */,
 				B94D5A161F0672FB006C3AA7 /* ListViewController.swift in Sources */,
 				B94D59FE1F065D36006C3AA7 /* AppDelegate.swift in Sources */,
-				3F538A221F0EAE98000528DA /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +279,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FNEH2787UY;
+				DEVELOPMENT_TEAM = 8KDMCH8V2F;
 				INFOPLIST_FILE = DataCenterPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jongchanpark.developed.DataCenterPractice;
@@ -296,7 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FNEH2787UY;
+				DEVELOPMENT_TEAM = 8KDMCH8V2F;
 				INFOPLIST_FILE = DataCenterPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jongchanpark.developed.DataCenterPractice;
@@ -324,7 +320,6 @@
 				B94D5A0E1F065D36006C3AA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

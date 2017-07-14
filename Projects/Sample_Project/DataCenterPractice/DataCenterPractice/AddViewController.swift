@@ -11,8 +11,11 @@ import UIKit
 class AddViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    
     @IBOutlet weak var ageTextField: UITextField!
+    
     @IBOutlet weak var genderSegmentedControl: UISegmentedControl!
+    
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
     override func viewDidLoad() {
@@ -35,4 +38,15 @@ class AddViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
         
     }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }

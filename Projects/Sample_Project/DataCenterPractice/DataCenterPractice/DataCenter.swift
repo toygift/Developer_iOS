@@ -8,8 +8,6 @@
 
 import UIKit
 
-typealias dicStringAny = [String:Any]
-
 class DataCenter {
     
     static let shared: DataCenter = DataCenter.init()
@@ -23,48 +21,47 @@ class DataCenter {
     }
     
     private let fileManager:FileManager = FileManager()
-    //documentPath
-    private let documentPath: String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! + "/Person.plist"
+    private let docPath: String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! + "/Person.plist"
     
     
     private init() {
-        if fileManager.fileExists(atPath: documentPath) {
-            loadFromDoc()//파일매니저에 파일이 존재하는경우 도큐먼트 로드
+        if fileManager.fileExists(atPath: docPath) {
+            loadFromDoc()
         } else {
-            loadFromBundle()//파일매니저에 파일이 존재하지 않는 경우 번들에서 복사
+            loadFromBundle()
         }
+        
     }
-    //파일매니저에 파일이 존재하는 경우
-    private func loadFromDoc() {
-        if let loadedArray = NSArray.init(contentsOfFile: documentPath) as? [dicStringAny] {
-            parsePersons(loadedArray)
-        }
-    }
-    //파일매니저에 파일이 존재하지 않는 경우
+    
     private func loadFromBundle() {
         let bundlePath: String = Bundle.main.path(forResource: "Person", ofType: "plist")!
-        if let loadedArray = NSArray.init(contentsOfFile: bundlePath) as? [dicStringAny] {
+        if let loadedArray = NSArray.init(contentsOfFile: bundlePath) as? [[String:Any]] {
             parsePersons(loadedArray)
         }
-        try? fileManager.copyItem(atPath: bundlePath, toPath: documentPath)
+        try? fileManager.copyItem(atPath: bundlePath, toPath: docPath)
         print(self.rawArray)
     }
     
+    private func loadFromDoc() {
+        if let loadedArray = NSArray.init(contentsOfFile: docPath) as? [[String:Any]] {
+            parsePersons(loadedArray)
+        }
+    }
     
-    private func parsePersons(_ array: [dicStringAny]) {
-        self.rawArray = array.map({ (dictionary: dicStringAny) -> Person in
+    private func parsePersons(_ array: [[String:Any]]) {
+        self.rawArray = array.map({ (dictionary: [String:Any]) -> Person in
             return Person.init(with: dictionary)
         })
     }
     
     private func saveToDoc() {
-        let nsArray: NSArray = NSArray.init(array: self.rawArray.map({ (person: Person) -> dicStringAny in
+        let nsArray: NSArray = NSArray.init(array: self.rawArray.map({ (person: Person) -> [String:Any] in
             return person.dictionary
         }))
-        nsArray.write(toFile: documentPath, atomically: true)
+        nsArray.write(toFile: docPath, atomically: true)
     }
     
-    func addPerson(_ dict:dicStringAny) {
+    func addPerson(_ dict:[String:Any]) {
         self.rawArray.append(Person.init(with: dict))
         self.saveToDoc()
     }
