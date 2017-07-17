@@ -8,9 +8,9 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     //Firebase
     var refer: DatabaseReference!
@@ -19,13 +19,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var inputName: UITextField!
     @IBOutlet weak var inputValue: UITextField!
+    @IBOutlet weak var inputKey: UITextField!
+    
     @IBOutlet weak var deleteValue: UITextField!
     @IBOutlet weak var selectName: UITextField!
     @IBOutlet weak var selectValue: UITextField!
     
     @IBAction func clickInsert(_ sender: UIButton) {
         
-        let itemRef = refer.child(((inputName).text?.lowercased())!)
+        let itemRef = refer.child(((inputName).text?.lowercased())!).child((inputKey.text?.lowercased())!)
         itemRef.setValue(inputValue.text!)
         
         self.inputName.text = ""
