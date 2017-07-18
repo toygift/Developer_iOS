@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
+class ViewController: UIViewController  {
     
     //Firebase
     var refer: DatabaseReference!
@@ -27,8 +27,8 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     @IBAction func clickInsert(_ sender: UIButton) {
         
-        let itemRef = refer.child(((inputName).text?.lowercased())!).child((inputKey.text?.lowercased())!)
-        itemRef.setValue(inputValue.text!)
+        let itemRef = refer.
+        itemRef.setValue(inputKey.text!)
         
         self.inputName.text = ""
         self.inputValue.text = ""
@@ -45,7 +45,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             self.deleteValue.text = ""
         }
     }
-    
+   
     
     @IBAction func clickSelect(_ sender: UIButton) {
         let itemRef = refer.child((selectName.text?.lowercased())!)
