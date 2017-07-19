@@ -38,16 +38,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let images = [UIImage(named: "1.jpg")!,
-                      UIImage(named: "2.jpg")!,
-                      UIImage(named: "3.jpg")!,
-                      UIImage(named: "4.jpg")!,
-                      UIImage(named: "5.jpg")!,
-                      UIImage(named: "6.jpg")!,
-                      UIImage(named: "7.jpg")!,
-                      UIImage(named: "8.jpg")!,
-                      UIImage(named: "9.jpg")!,
-                      UIImage(named: "10.jpg")!]
+       let images =  [UIImage.init(named: "1.jpg")!,
+         UIImage.init(named: "2.jpg")!,
+         UIImage.init(named: "3.jpg")!,
+         UIImage.init(named: "4.jpg")!,
+         UIImage.init(named: "5.jpg")!,
+         UIImage.init(named: "6.jpg")!,
+         UIImage.init(named: "7.jpg")!,
+         UIImage.init(named: "8.jpg")!,
+         UIImage.init(named: "9.jpg")!,
+         UIImage.init(named: "10.jpg")!]
+        
         
         imageView.animationDuration = 15.0
         imageView.animationImages = images
