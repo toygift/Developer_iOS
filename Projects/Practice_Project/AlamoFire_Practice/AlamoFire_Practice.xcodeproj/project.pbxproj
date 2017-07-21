@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		004B4B511EB5DEECC69DEB9B /* Pods_AlamoFire_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538D3D45FD1714895294E6E3 /* Pods_AlamoFire_Practice.framework */; };
+		3F3509BC1F21CD4100BB222B /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3509BB1F21CD4100BB222B /* UploadViewController.swift */; };
 		3F7BFBCB1F20CDDC00E487C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFBCA1F20CDDC00E487C3 /* AppDelegate.swift */; };
 		3F7BFBCD1F20CDDC00E487C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BFBCC1F20CDDC00E487C3 /* ViewController.swift */; };
 		3F7BFBD01F20CDDC00E487C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7BFBCE1F20CDDC00E487C3 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F3509BB1F21CD4100BB222B /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		3F7BFBC71F20CDDC00E487C3 /* AlamoFire_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamoFire_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7BFBCA1F20CDDC00E487C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7BFBCC1F20CDDC00E487C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				3F7BFBCA1F20CDDC00E487C3 /* AppDelegate.swift */,
 				3F7BFBCC1F20CDDC00E487C3 /* ViewController.swift */,
 				3F7BFBCE1F20CDDC00E487C3 /* Main.storyboard */,
+				3F3509BB1F21CD4100BB222B /* UploadViewController.swift */,
 				3F7BFBD11F20CDDC00E487C3 /* Assets.xcassets */,
 				3F7BFBD31F20CDDC00E487C3 /* LaunchScreen.storyboard */,
 				3F7BFBD61F20CDDC00E487C3 /* Info.plist */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7BFBCD1F20CDDC00E487C3 /* ViewController.swift in Sources */,
+				3F3509BC1F21CD4100BB222B /* UploadViewController.swift in Sources */,
 				3F7BFBCB1F20CDDC00E487C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
