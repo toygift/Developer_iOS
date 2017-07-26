@@ -1,4 +1,4 @@
-#MVP 패턴
+# MVP 패턴
 - MVC형태에서 View와 Model 간의 커플링을 줄이는 것을 목표로함 
 
 ## View
