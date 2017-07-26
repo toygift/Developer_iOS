@@ -12,10 +12,12 @@
 ## Model
 - 비지니스로직의 처리
 - Application Data를 다룸
+
+
 ![](1.png)
 ![](2.png)
 
-       [그림출처: http://steveyoon.tistory.com/188](http://steveyoon.tistory.com/188)
+[그림출처: http://steveyoon.tistory.com/188](http://steveyoon.tistory.com/188)
 
 ## 과정
 1. 입력이 View에서 처리됨
