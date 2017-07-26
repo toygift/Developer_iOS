@@ -58,6 +58,7 @@ someSubset: ArraySlice<Int> = 3 values {
   [4] = 9
 }
 ```
+
 ```
 12> var my2dArray: [[Int]] = [[1,2],[10,11],[20,30]]
 my2dArray: [[Int]] = 3 values {
