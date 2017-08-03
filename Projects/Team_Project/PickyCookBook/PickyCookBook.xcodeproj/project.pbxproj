@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F6FA31F1F32FFD6008A2AC1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6FA31E1F32FFD6008A2AC1 /* Data.swift */; };
+		BAEC34C11F32F04900EEB9BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEC34C01F32F04900EEB9BC /* AppDelegate.swift */; };
+		BAEC34C61F32F04900EEB9BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEC34C41F32F04900EEB9BC /* Main.storyboard */; };
+		BAEC34C81F32F04900EEB9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAEC34C71F32F04900EEB9BC /* Assets.xcassets */; };
+		BAEC34CB1F32F04900EEB9BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEC34C91F32F04900EEB9BC /* LaunchScreen.storyboard */; };
+		BAEC34D81F32F4D500EEB9BC /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEC34D71F32F4D500EEB9BC /* DetailPageViewController.swift */; };
+		BAEC34DA1F32F4DD00EEB9BC /* DetailPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEC34D91F32F4DD00EEB9BC /* DetailPage.storyboard */; };
+		BAEC34DD1F32F54A00EEB9BC /* LoginPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEC34DC1F32F54A00EEB9BC /* LoginPage.storyboard */; };
+		BAEC34DF1F32F55E00EEB9BC /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEC34DE1F32F55E00EEB9BC /* LoginPageViewController.swift */; };
+		BAEC34E21F32F58E00EEB9BC /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEC34E11F32F58E00EEB9BC /* SignUpPageViewController.swift */; };
+		BAEC34E41F32F5AA00EEB9BC /* SignUpPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEC34E31F32F5AA00EEB9BC /* SignUpPage.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F6FA31E1F32FFD6008A2AC1 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		BAEC34BD1F32F04900EEB9BC /* PickyCookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickyCookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAEC34C01F32F04900EEB9BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAEC34C51F32F04900EEB9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAEC34C71F32F04900EEB9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAEC34CA1F32F04900EEB9BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAEC34CC1F32F04900EEB9BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAEC34D71F32F4D500EEB9BC /* DetailPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		BAEC34D91F32F4DD00EEB9BC /* DetailPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailPage.storyboard; sourceTree = "<group>"; };
+		BAEC34DC1F32F54A00EEB9BC /* LoginPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginPage.storyboard; sourceTree = "<group>"; };
+		BAEC34DE1F32F55E00EEB9BC /* LoginPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		BAEC34E11F32F58E00EEB9BC /* SignUpPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
+		BAEC34E31F32F5AA00EEB9BC /* SignUpPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUpPage.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAEC34BA1F32F04900EEB9BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAEC34B41F32F04900EEB9BC = {
+			isa = PBXGroup;
+			children = (
+				BAEC34BF1F32F04900EEB9BC /* PickyCookBook */,
+				BAEC34BE1F32F04900EEB9BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAEC34BE1F32F04900EEB9BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAEC34BD1F32F04900EEB9BC /* PickyCookBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAEC34BF1F32F04900EEB9BC /* PickyCookBook */ = {
+			isa = PBXGroup;
+			children = (
+				BAEC34C01F32F04900EEB9BC /* AppDelegate.swift */,
+				BAEC34C41F32F04900EEB9BC /* Main.storyboard */,
+				BAEC34DB1F32F4EA00EEB9BC /* DetailPage */,
+				BAEC34E01F32F56200EEB9BC /* LoginPage */,
+				BAEC34E51F32F5AF00EEB9BC /* SignUpPage */,
+				BAEC34C71F32F04900EEB9BC /* Assets.xcassets */,
+				BAEC34C91F32F04900EEB9BC /* LaunchScreen.storyboard */,
+				BAEC34CC1F32F04900EEB9BC /* Info.plist */,
+			);
+			path = PickyCookBook;
+			sourceTree = "<group>";
+		};
+		BAEC34DB1F32F4EA00EEB9BC /* DetailPage */ = {
+			isa = PBXGroup;
+			children = (
+				BAEC34D91F32F4DD00EEB9BC /* DetailPage.storyboard */,
+				BAEC34D71F32F4D500EEB9BC /* DetailPageViewController.swift */,
+			);
+			name = DetailPage;
+			sourceTree = "<group>";
+		};
+		BAEC34E01F32F56200EEB9BC /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				BAEC34DC1F32F54A00EEB9BC /* LoginPage.storyboard */,
+				BAEC34DE1F32F55E00EEB9BC /* LoginPageViewController.swift */,
+			);
+			name = LoginPage;
+			sourceTree = "<group>";
+		};
+		BAEC34E51F32F5AF00EEB9BC /* SignUpPage */ = {
+			isa = PBXGroup;
+			children = (
+				3F6FA31E1F32FFD6008A2AC1 /* Data.swift */,
+				BAEC34E11F32F58E00EEB9BC /* SignUpPageViewController.swift */,
+				BAEC34E31F32F5AA00EEB9BC /* SignUpPage.storyboard */,
+			);
+			name = SignUpPage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAEC34BC1F32F04900EEB9BC /* PickyCookBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAEC34CF1F32F04900EEB9BC /* Build configuration list for PBXNativeTarget "PickyCookBook" */;
+			buildPhases = (
+				BAEC34B91F32F04900EEB9BC /* Sources */,
+				BAEC34BA1F32F04900EEB9BC /* Frameworks */,
+				BAEC34BB1F32F04900EEB9BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PickyCookBook;
+			productName = PickyCookBook;
+			productReference = BAEC34BD1F32F04900EEB9BC /* PickyCookBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAEC34B51F32F04900EEB9BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "유하늘";
+				TargetAttributes = {
+					BAEC34BC1F32F04900EEB9BC = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BAEC34B81F32F04900EEB9BC /* Build configuration list for PBXProject "PickyCookBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAEC34B41F32F04900EEB9BC;
+			productRefGroup = BAEC34BE1F32F04900EEB9BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAEC34BC1F32F04900EEB9BC /* PickyCookBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAEC34BB1F32F04900EEB9BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEC34DA1F32F4DD00EEB9BC /* DetailPage.storyboard in Resources */,
+				BAEC34E41F32F5AA00EEB9BC /* SignUpPage.storyboard in Resources */,
+				BAEC34CB1F32F04900EEB9BC /* LaunchScreen.storyboard in Resources */,
+				BAEC34DD1F32F54A00EEB9BC /* LoginPage.storyboard in Resources */,
+				BAEC34C81F32F04900EEB9BC /* Assets.xcassets in Resources */,
+				BAEC34C61F32F04900EEB9BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAEC34B91F32F04900EEB9BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAEC34DF1F32F55E00EEB9BC /* LoginPageViewController.swift in Sources */,
+				3F6FA31F1F32FFD6008A2AC1 /* Data.swift in Sources */,
+				BAEC34D81F32F4D500EEB9BC /* DetailPageViewController.swift in Sources */,
+				BAEC34C11F32F04900EEB9BC /* AppDelegate.swift in Sources */,
+				BAEC34E21F32F58E00EEB9BC /* SignUpPageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BAEC34C41F32F04900EEB9BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAEC34C51F32F04900EEB9BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAEC34C91F32F04900EEB9BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAEC34CA1F32F04900EEB9BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAEC34CD1F32F04900EEB9BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAEC34CE1F32F04900EEB9BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAEC34D01F32F04900EEB9BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PickyCookBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PickyCookBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BAEC34D11F32F04900EEB9BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PickyCookBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PickyCookBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAEC34B81F32F04900EEB9BC /* Build configuration list for PBXProject "PickyCookBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEC34CD1F32F04900EEB9BC /* Debug */,
+				BAEC34CE1F32F04900EEB9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAEC34CF1F32F04900EEB9BC /* Build configuration list for PBXNativeTarget "PickyCookBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAEC34D01F32F04900EEB9BC /* Debug */,
+				BAEC34D11F32F04900EEB9BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAEC34B51F32F04900EEB9BC /* Project object */;
+}
