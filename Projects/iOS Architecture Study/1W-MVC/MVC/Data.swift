@@ -23,6 +23,10 @@ struct Person {
     
     var name: String?
     var age: String?
-
+    
+//    private init(pName: String, pAge:Int) {
+//        name = pName
+//        age = pAge
+//    }
 }
 

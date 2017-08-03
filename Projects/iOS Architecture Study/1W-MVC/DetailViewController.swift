@@ -32,12 +32,12 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // Tableview cell
     //***************************************************************
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return Data.shared.personArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Reuse") as! DetailTableViewCell
         
@@ -46,5 +46,16 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return cell
     }
+
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
