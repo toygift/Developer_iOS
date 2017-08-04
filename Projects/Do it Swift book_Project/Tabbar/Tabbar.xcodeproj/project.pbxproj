@@ -12,6 +12,11 @@
 		3F31FC9A1F349C2C00ABAA48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F31FC981F349C2C00ABAA48 /* Main.storyboard */; };
 		3F31FC9C1F349C2C00ABAA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F31FC9B1F349C2C00ABAA48 /* Assets.xcassets */; };
 		3F31FC9F1F349C2C00ABAA48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F31FC9D1F349C2C00ABAA48 /* LaunchScreen.storyboard */; };
+		3F31FCA81F349CBA00ABAA48 /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F31FCA61F349CBA00ABAA48 /* lamp_off.png */; };
+		3F31FCA91F349CBA00ABAA48 /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F31FCA71F349CBA00ABAA48 /* lamp_on.png */; };
+		3F31FCAB1F349CD000ABAA48 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31FCAA1F349CD000ABAA48 /* ImageViewController.swift */; };
+		3F31FCAD1F349D5E00ABAA48 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F31FCAC1F349D5E00ABAA48 /* DatePickerViewController.swift */; };
+		3F31FCAF1F349E6900ABAA48 /* File.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F31FCAE1F349E6900ABAA48 /* File.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		3F31FC9B1F349C2C00ABAA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F31FC9E1F349C2C00ABAA48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F31FCA01F349C2C00ABAA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F31FCA61F349CBA00ABAA48 /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
+		3F31FCA71F349CBA00ABAA48 /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
+		3F31FCAA1F349CD000ABAA48 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		3F31FCAC1F349D5E00ABAA48 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		3F31FCAE1F349E6900ABAA48 /* File.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = File.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,15 @@
 			children = (
 				3F31FC941F349C2C00ABAA48 /* AppDelegate.swift */,
 				3F31FC961F349C2C00ABAA48 /* ViewController.swift */,
+				3F31FCAA1F349CD000ABAA48 /* ImageViewController.swift */,
+				3F31FCAC1F349D5E00ABAA48 /* DatePickerViewController.swift */,
 				3F31FC981F349C2C00ABAA48 /* Main.storyboard */,
 				3F31FC9B1F349C2C00ABAA48 /* Assets.xcassets */,
 				3F31FC9D1F349C2C00ABAA48 /* LaunchScreen.storyboard */,
 				3F31FCA01F349C2C00ABAA48 /* Info.plist */,
+				3F31FCA61F349CBA00ABAA48 /* lamp_off.png */,
+				3F31FCA71F349CBA00ABAA48 /* lamp_on.png */,
+				3F31FCAE1F349E6900ABAA48 /* File.png */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -126,7 +141,10 @@
 			files = (
 				3F31FC9F1F349C2C00ABAA48 /* LaunchScreen.storyboard in Resources */,
 				3F31FC9C1F349C2C00ABAA48 /* Assets.xcassets in Resources */,
+				3F31FCA91F349CBA00ABAA48 /* lamp_on.png in Resources */,
+				3F31FCAF1F349E6900ABAA48 /* File.png in Resources */,
 				3F31FC9A1F349C2C00ABAA48 /* Main.storyboard in Resources */,
+				3F31FCA81F349CBA00ABAA48 /* lamp_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F31FCAD1F349D5E00ABAA48 /* DatePickerViewController.swift in Sources */,
 				3F31FC971F349C2C00ABAA48 /* ViewController.swift in Sources */,
+				3F31FCAB1F349CD000ABAA48 /* ImageViewController.swift in Sources */,
 				3F31FC951F349C2C00ABAA48 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
