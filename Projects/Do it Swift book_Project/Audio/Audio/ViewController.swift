@@ -10,13 +10,17 @@ import UIKit
 import AVFoundation
 
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
 
     var audioPlayer: AVAudioPlayer!
     var audioFile: URL!
     let MAX_VOLUME: Float = 10.0
     var progressTimer: Timer!
     let timePlayerSelcetor: Selector = #selector(ViewController.updatePlayTime)
+    let timeRecordSelector: Selector = #selector(ViewController.updateRecordTime)
+    var audioRecord: AVAudioRecorder!
+    var isRecordMode = false
+    
     
     @IBOutlet var progressPlay: UIProgressView!
     @IBOutlet var currentTime: UILabel!
@@ -28,7 +32,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet var volumeSlider: UISlider!
 
-
+    @IBOutlet var recordButton: UIButton!
+    @IBOutlet var recordTimeLabel: UILabel!
+    
 }
 
 extension ViewController {
@@ -63,6 +69,51 @@ extension ViewController {
         audioPlayer.volume = volumeSlider.value
         
     }
+    
+    @IBAction func recordSwitch(_ sender: UISwitch) {
+        
+        if sender.isOn {
+            
+            audioPlayer.stop()
+            audioPlayer.currentTime = 0
+            recordTimeLabel.text = convertNSTimeInterval2String(0)
+            isRecordMode = true
+            recordButton.isEnabled = true
+            recordTimeLabel.isEnabled = true
+            
+        } else {
+            
+            isRecordMode = false
+            recordButton.isEnabled = false
+            recordTimeLabel.isEnabled = false
+            recordTimeLabel.text = convertNSTimeInterval2String(0)
+            
+        }
+        
+        selectAuioFile()
+        
+        if !isRecordMode {
+            initPlay()
+        } else {
+            initRecord()
+        }
+    }
+    
+    @IBAction func recordButton(_ sender: UIButton) {
+        
+        if sender.titleLabel?.text == "Record" {
+            audioRecord.record()
+            sender.setTitle("Stop", for: UIControlState())
+            progressTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: timeRecordSelector, userInfo: nil, repeats: true)
+        } else {
+            audioRecord.stop()
+            progressTimer.invalidate()
+            sender.setTitle("Record", for: UIControlState())
+            playButton.isEnabled = true
+            initPlay()
+        }
+        
+    }
 }
 
 extension ViewController {
@@ -70,9 +121,14 @@ extension ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        audioFile = Bundle.main.url(forResource: "Sicilian_Breeze", withExtension: "mp3")
-        initPlay()
-        
+        selectAuioFile()
+        if !isRecordMode {
+            initPlay()
+            recordButton.isEnabled = false
+            recordTimeLabel.isEnabled = false
+        } else {
+            initRecord()
+        }
     }
 }
 
@@ -130,5 +186,60 @@ extension ViewController {
         progressTimer.invalidate()
         setPlayButton(true, pause: false, stop: false)
         
+    }
+    
+    func selectAuioFile() {
+        if !isRecordMode {
+            
+            audioFile = Bundle.main.url(forResource: "Sicilian_Breeze", withExtension: "mp3")
+            
+        } else {
+            let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            audioFile = documentDirectory.appendingPathComponent("recordFile.m4a")
+            
+        }
+    }
+    
+    func initRecord() {
+        
+        let recordSettings = [
+            AVFormatIDKey: NSNumber(value: kAudioFormatAppleLossless as UInt32),
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
+            AVEncoderBitRateKey: 320000,
+            AVNumberOfChannelsKey: 2,
+            AVSampleRateKey: 44100.0] as [String:Any]
+        do {
+            audioRecord = try AVAudioRecorder(url: audioFile, settings: recordSettings)
+        } catch let error as NSError {
+            print("Error-initRecord : \(error)")
+        }
+        
+        audioRecord.delegate = self
+        audioRecord.isMeteringEnabled = true
+        audioRecord.prepareToRecord()
+        
+        volumeSlider.value = 1.0
+        audioPlayer.volume = volumeSlider.value
+        endTime.text = convertNSTimeInterval2String(0)
+        currentTime.text = convertNSTimeInterval2String(0)
+        setPlayButton(false, pause: false, stop: false)
+        
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        } catch let error as NSError {
+            print("Error-setCategory : \(error)")
+        }
+        
+        do {
+            try session.setActive(true)
+        } catch let error as NSError {
+            print("Error-setActive : \(error)")
+        }
+    
+    }
+    
+    func updateRecordTime() {
+        recordTimeLabel.text = convertNSTimeInterval2String(audioRecord.currentTime)
     }
 }
