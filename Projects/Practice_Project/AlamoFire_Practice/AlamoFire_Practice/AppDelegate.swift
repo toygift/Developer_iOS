@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  AlamoFire_Practice
 //
-//  Created by jaeseong on 2017. 7. 20..
+//  Created by jaeseong on 2017. 8. 8..
 //  Copyright © 2017년 jaeseong. All rights reserved.
 //
 
