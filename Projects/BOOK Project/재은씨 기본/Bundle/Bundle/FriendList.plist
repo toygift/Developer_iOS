@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>list</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>불똥</string>
+			<key>age</key>
+			<string>35</string>
+			<key>address</key>
+			<string>서울시 관악구 대학동</string>
+			<key>phone</key>
+			<string>01073794947</string>
+			<key>img_URL</key>
+			<string>image1</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>lee</string>
+			<key>age</key>
+			<string>37</string>
+			<key>address</key>
+			<string>seoul</string>
+			<key>phone</key>
+			<string>010</string>
+			<key>img_URL</key>
+			<string>image2</string>
+		</dict>
+	</array>
+	<key>Version</key>
+	<string>1.0</string>
+</dict>
+</plist>
