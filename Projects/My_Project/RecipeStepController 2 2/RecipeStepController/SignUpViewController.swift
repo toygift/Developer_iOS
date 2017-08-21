@@ -75,7 +75,7 @@ extension SignUpViewController {
                 let json = JSON(value)
                 print("JSON: \(json)")
                 
-                guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "recipeCreate") else {
+                guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mypage") else {
                     return
                 }
                 self.present(nextViewController, animated: true, completion: nil)

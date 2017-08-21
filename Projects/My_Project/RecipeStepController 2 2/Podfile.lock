@@ -15,6 +15,7 @@ PODS:
     - FBSDKCoreKit
   - RAMPaperSwitch (2.0.5)
   - SwiftyJSON (3.1.4)
+  - Toaster (2.0.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - FBSDKShareKit
   - RAMPaperSwitch (~> 2.0.3)
   - SwiftyJSON
+  - Toaster
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -34,7 +36,8 @@ SPEC CHECKSUMS:
   FBSDKShareKit: aea699d3cac749af08e360f4e949b82ffa8813f5
   RAMPaperSwitch: 8e547186be122e858aa060596708f0dcbfe7593f
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Toaster: f13031c636ef065281bc11857be9a16c7659e04f
 
-PODFILE CHECKSUM: 8cfd23061344500155f3a6a55764610c190c72a0
+PODFILE CHECKSUM: b4d5918d8506d8be4a38806247c5f6b32fd85b1f
 
 COCOAPODS: 1.2.1

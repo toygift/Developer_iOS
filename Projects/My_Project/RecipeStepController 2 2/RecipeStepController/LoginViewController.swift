@@ -98,10 +98,13 @@ extension LoginViewController {
                 
                 let json = JSON(value)
                 let currentUserToken = json["token"].stringValue
-                // UserDefaults 에 토큰 저장
                 UserDefaults.standard.set(currentUserToken, forKey: "token")
+                let currentUserPk = json["pk"].intValue
+                UserDefaults.standard.set(currentUserPk, forKey: "userPK")
+                // UserDefaults 에 토큰 저장
                 
-                guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "recipeCreate") else {
+                
+                guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mypage") else {
                     return
                 }
                 self.present(nextViewController, animated: true, completion: nil)
@@ -130,9 +133,10 @@ extension LoginViewController {
                 // UserDefaults 에 토큰 저장
                 let currentUserToken = json["token"].stringValue
                 UserDefaults.standard.set(currentUserToken, forKey: "token")
+                let currentUserPk = json["pk"].intValue
+                UserDefaults.standard.set(currentUserPk, forKey: "userPK")
                 
-                
-                guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "recipeCreate") else {
+                guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mypage") else {
                     return
                 }
                 self.present(nextViewController, animated: true, completion: nil)

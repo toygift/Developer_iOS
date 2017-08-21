@@ -226,7 +226,7 @@ extension RecipeCreate {
                         print(value)
                         let recipePK = JSON(value)["pk"].intValue
                         print("피케이값을 알려줘라",recipePK)
-                        UserDefaults.standard.set(recipePK, forKey: "PK")
+                        UserDefaults.standard.set(recipePK, forKey: "recipePK")
                     case .failure(let error):
                         print(error)
                     }

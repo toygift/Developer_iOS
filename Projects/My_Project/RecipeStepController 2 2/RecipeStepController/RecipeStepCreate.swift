@@ -155,7 +155,7 @@ class RecipeStepCreate: UIViewController, UINavigationControllerDelegate, UIImag
 extension RecipeStepCreate {
     func alamo(){
         guard let token = UserDefaults.standard.string(forKey: "token") else { return }
-        let pkValues = UserDefaults.standard.object(forKey: "PK") as! Int
+        let pkValues = UserDefaults.standard.object(forKey: "recipePK") as! Int
         
         let url = "http://pickycookbook.co.kr/api/recipe/step/create/"
         let parameters : [String:Any] = ["recipe":pkValues, "description": desc, "is_timer":cookTimer, "timer":cookTime*60, "img_step":captureImage]

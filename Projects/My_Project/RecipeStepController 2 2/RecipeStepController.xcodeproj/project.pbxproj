@@ -10,6 +10,8 @@
 		3373378033D5B0C57175EC65 /* Pods_RecipeStepController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03B21EC7C48B8C042127697 /* Pods_RecipeStepController.framework */; };
 		3F292B751F48D95C00233C35 /* RAMPaperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F292B741F48D95C00233C35 /* RAMPaperSwitch.swift */; };
 		3FD86A841F48C8E00012C3F8 /* DTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD86A831F48C8E00012C3F8 /* DTTextField.swift */; };
+		4B42C6311F4AF28F00BB3549 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42C6301F4AF28F00BB3549 /* MyPageViewController.swift */; };
+		4B42C6331F4AF68200BB3549 /* MyInfoModify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42C6321F4AF68200BB3549 /* MyInfoModify.swift */; };
 		4B623FA51F46E1210032D7D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B623FA41F46E1210032D7D1 /* AppDelegate.swift */; };
 		4B623FA71F46E1210032D7D1 /* RecipeStepCreate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B623FA61F46E1210032D7D1 /* RecipeStepCreate.swift */; };
 		4B623FAA1F46E1210032D7D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B623FA81F46E1210032D7D1 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		3FD86A831F48C8E00012C3F8 /* DTTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTTextField.swift; sourceTree = "<group>"; };
 		49C84D530B12FDBC39350786 /* Pods-RecipeStepController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeStepController.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeStepController/Pods-RecipeStepController.release.xcconfig"; sourceTree = "<group>"; };
 		4B42C62F1F49BAF100BB3549 /* RecipeStepController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeStepController.entitlements; sourceTree = "<group>"; };
+		4B42C6301F4AF28F00BB3549 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		4B42C6321F4AF68200BB3549 /* MyInfoModify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoModify.swift; sourceTree = "<group>"; };
 		4B623FA11F46E1210032D7D1 /* RecipeStepController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeStepController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B623FA41F46E1210032D7D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B623FA61F46E1210032D7D1 /* RecipeStepCreate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeStepCreate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4B42C6561F4B0EC700BB3549 /* MYPAGE */ = {
+			isa = PBXGroup;
+			children = (
+				4B42C6321F4AF68200BB3549 /* MyInfoModify.swift */,
+				4B42C6301F4AF28F00BB3549 /* MyPageViewController.swift */,
+			);
+			name = MYPAGE;
+			sourceTree = "<group>";
+		};
+		4B42C6571F4B0ED700BB3549 /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				4B9EC6421F497DE6000C0E4D /* LoginViewController.swift */,
+			);
+			name = LOGIN;
+			sourceTree = "<group>";
+		};
+		4B42C6581F4B0EDF00BB3549 /* SIGNUP */ = {
+			isa = PBXGroup;
+			children = (
+				4B9EC6441F49827C000C0E4D /* SignUpViewController.swift */,
+			);
+			name = SIGNUP;
+			sourceTree = "<group>";
+		};
+		4B42C6591F4B0EF600BB3549 /* RECIPE */ = {
+			isa = PBXGroup;
+			children = (
+				4B623FB81F46E4910032D7D1 /* RecipeCreate.swift */,
+				4B623FA61F46E1210032D7D1 /* RecipeStepCreate.swift */,
+			);
+			name = RECIPE;
+			sourceTree = "<group>";
+		};
+		4B42C65A1F4B0F0B00BB3549 /* OPENSOURCE */ = {
+			isa = PBXGroup;
+			children = (
+				3FD86A831F48C8E00012C3F8 /* DTTextField.swift */,
+				3F292B741F48D95C00233C35 /* RAMPaperSwitch.swift */,
+			);
+			name = OPENSOURCE;
+			sourceTree = "<group>";
+		};
+		4B42C65B1F4B0F2000BB3549 /* XCODE */ = {
+			isa = PBXGroup;
+			children = (
+				4B42C62F1F49BAF100BB3549 /* RecipeStepController.entitlements */,
+				4B9EC6401F4976E4000C0E4D /* ApiDelegate.swift */,
+				4B623FA41F46E1210032D7D1 /* AppDelegate.swift */,
+				4B623FAB1F46E1210032D7D1 /* Assets.xcassets */,
+				4B623FAD1F46E1210032D7D1 /* LaunchScreen.storyboard */,
+				4B623FB01F46E1210032D7D1 /* Info.plist */,
+			);
+			name = XCODE;
+			sourceTree = "<group>";
+		};
 		4B623F981F46E1200032D7D1 = {
 			isa = PBXGroup;
 			children = (
@@ -82,19 +142,13 @@
 		4B623FA31F46E1210032D7D1 /* RecipeStepController */ = {
 			isa = PBXGroup;
 			children = (
-				4B42C62F1F49BAF100BB3549 /* RecipeStepController.entitlements */,
-				4B623FA41F46E1210032D7D1 /* AppDelegate.swift */,
-				4B623FB81F46E4910032D7D1 /* RecipeCreate.swift */,
-				4B623FA61F46E1210032D7D1 /* RecipeStepCreate.swift */,
 				4B623FA81F46E1210032D7D1 /* Main.storyboard */,
-				4B9EC6441F49827C000C0E4D /* SignUpViewController.swift */,
-				4B9EC6421F497DE6000C0E4D /* LoginViewController.swift */,
-				4B623FAB1F46E1210032D7D1 /* Assets.xcassets */,
-				4B9EC6401F4976E4000C0E4D /* ApiDelegate.swift */,
-				4B623FAD1F46E1210032D7D1 /* LaunchScreen.storyboard */,
-				4B623FB01F46E1210032D7D1 /* Info.plist */,
-				3FD86A831F48C8E00012C3F8 /* DTTextField.swift */,
-				3F292B741F48D95C00233C35 /* RAMPaperSwitch.swift */,
+				4B42C65B1F4B0F2000BB3549 /* XCODE */,
+				4B42C6591F4B0EF600BB3549 /* RECIPE */,
+				4B42C6561F4B0EC700BB3549 /* MYPAGE */,
+				4B42C6581F4B0EDF00BB3549 /* SIGNUP */,
+				4B42C6571F4B0ED700BB3549 /* LOGIN */,
+				4B42C65A1F4B0F0B00BB3549 /* OPENSOURCE */,
 			);
 			path = RecipeStepController;
 			sourceTree = "<group>";
@@ -237,9 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B9EC6431F497DE6000C0E4D /* LoginViewController.swift in Sources */,
+				4B42C6311F4AF28F00BB3549 /* MyPageViewController.swift in Sources */,
 				4B9EC6411F4976E4000C0E4D /* ApiDelegate.swift in Sources */,
 				3F292B751F48D95C00233C35 /* RAMPaperSwitch.swift in Sources */,
 				4B9EC6451F49827C000C0E4D /* SignUpViewController.swift in Sources */,
+				4B42C6331F4AF68200BB3549 /* MyInfoModify.swift in Sources */,
 				4B623FA71F46E1210032D7D1 /* RecipeStepCreate.swift in Sources */,
 				3FD86A841F48C8E00012C3F8 /* DTTextField.swift in Sources */,
 				4B623FA51F46E1210032D7D1 /* AppDelegate.swift in Sources */,

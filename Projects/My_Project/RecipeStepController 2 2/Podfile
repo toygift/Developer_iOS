@@ -13,4 +13,5 @@ target 'RecipeStepController' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'Toaster'
 end
