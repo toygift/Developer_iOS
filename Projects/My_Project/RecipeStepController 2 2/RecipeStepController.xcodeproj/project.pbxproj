@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		3373378033D5B0C57175EC65 /* Pods_RecipeStepController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03B21EC7C48B8C042127697 /* Pods_RecipeStepController.framework */; };
 		3F292B751F48D95C00233C35 /* RAMPaperSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F292B741F48D95C00233C35 /* RAMPaperSwitch.swift */; };
+		3F65B1741F4CA017009CBD7A /* BookMarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65B1731F4CA017009CBD7A /* BookMarkList.swift */; };
+		3F65B1771F4CA043009CBD7A /* BookMarkListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65B1761F4CA043009CBD7A /* BookMarkListCell.swift */; };
 		3FD86A841F48C8E00012C3F8 /* DTTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD86A831F48C8E00012C3F8 /* DTTextField.swift */; };
+		4B128A741F4C369000BA6A54 /* RecipeSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B128A731F4C369000BA6A54 /* RecipeSearch.swift */; };
+		4B128A771F4C52BA00BA6A54 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B128A761F4C52BA00BA6A54 /* SearchResult.swift */; };
+		4B128A791F4C52E100BA6A54 /* SearchResultCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B128A781F4C52E100BA6A54 /* SearchResultCellTableViewCell.swift */; };
 		4B42C6311F4AF28F00BB3549 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42C6301F4AF28F00BB3549 /* MyPageViewController.swift */; };
 		4B42C6331F4AF68200BB3549 /* MyInfoModify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42C6321F4AF68200BB3549 /* MyInfoModify.swift */; };
 		4B623FA51F46E1210032D7D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B623FA41F46E1210032D7D1 /* AppDelegate.swift */; };
@@ -25,8 +30,13 @@
 
 /* Begin PBXFileReference section */
 		3F292B741F48D95C00233C35 /* RAMPaperSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMPaperSwitch.swift; sourceTree = "<group>"; };
+		3F65B1731F4CA017009CBD7A /* BookMarkList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkList.swift; sourceTree = "<group>"; };
+		3F65B1761F4CA043009CBD7A /* BookMarkListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookMarkListCell.swift; sourceTree = "<group>"; };
 		3FD86A831F48C8E00012C3F8 /* DTTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTTextField.swift; sourceTree = "<group>"; };
 		49C84D530B12FDBC39350786 /* Pods-RecipeStepController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeStepController.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipeStepController/Pods-RecipeStepController.release.xcconfig"; sourceTree = "<group>"; };
+		4B128A731F4C369000BA6A54 /* RecipeSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeSearch.swift; sourceTree = "<group>"; };
+		4B128A761F4C52BA00BA6A54 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		4B128A781F4C52E100BA6A54 /* SearchResultCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCellTableViewCell.swift; sourceTree = "<group>"; };
 		4B42C62F1F49BAF100BB3549 /* RecipeStepController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RecipeStepController.entitlements; sourceTree = "<group>"; };
 		4B42C6301F4AF28F00BB3549 /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		4B42C6321F4AF68200BB3549 /* MyInfoModify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoModify.swift; sourceTree = "<group>"; };
@@ -63,6 +73,25 @@
 				E03B21EC7C48B8C042127697 /* Pods_RecipeStepController.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F65B1751F4CA01B009CBD7A /* BOOKMARK */ = {
+			isa = PBXGroup;
+			children = (
+				3F65B1761F4CA043009CBD7A /* BookMarkListCell.swift */,
+				3F65B1731F4CA017009CBD7A /* BookMarkList.swift */,
+			);
+			name = BOOKMARK;
+			sourceTree = "<group>";
+		};
+		4B128A751F4C528600BA6A54 /* SEARCH */ = {
+			isa = PBXGroup;
+			children = (
+				4B128A731F4C369000BA6A54 /* RecipeSearch.swift */,
+				4B128A761F4C52BA00BA6A54 /* SearchResult.swift */,
+				4B128A781F4C52E100BA6A54 /* SearchResultCellTableViewCell.swift */,
+			);
+			name = SEARCH;
 			sourceTree = "<group>";
 		};
 		4B42C6561F4B0EC700BB3549 /* MYPAGE */ = {
@@ -142,12 +171,14 @@
 		4B623FA31F46E1210032D7D1 /* RecipeStepController */ = {
 			isa = PBXGroup;
 			children = (
-				4B623FA81F46E1210032D7D1 /* Main.storyboard */,
 				4B42C65B1F4B0F2000BB3549 /* XCODE */,
-				4B42C6591F4B0EF600BB3549 /* RECIPE */,
-				4B42C6561F4B0EC700BB3549 /* MYPAGE */,
-				4B42C6581F4B0EDF00BB3549 /* SIGNUP */,
+				4B623FA81F46E1210032D7D1 /* Main.storyboard */,
 				4B42C6571F4B0ED700BB3549 /* LOGIN */,
+				4B42C6581F4B0EDF00BB3549 /* SIGNUP */,
+				4B42C6561F4B0EC700BB3549 /* MYPAGE */,
+				4B42C6591F4B0EF600BB3549 /* RECIPE */,
+				4B128A751F4C528600BA6A54 /* SEARCH */,
+				3F65B1751F4CA01B009CBD7A /* BOOKMARK */,
 				4B42C65A1F4B0F0B00BB3549 /* OPENSOURCE */,
 			);
 			path = RecipeStepController;
@@ -290,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B128A741F4C369000BA6A54 /* RecipeSearch.swift in Sources */,
 				4B9EC6431F497DE6000C0E4D /* LoginViewController.swift in Sources */,
 				4B42C6311F4AF28F00BB3549 /* MyPageViewController.swift in Sources */,
 				4B9EC6411F4976E4000C0E4D /* ApiDelegate.swift in Sources */,
@@ -297,9 +329,13 @@
 				4B9EC6451F49827C000C0E4D /* SignUpViewController.swift in Sources */,
 				4B42C6331F4AF68200BB3549 /* MyInfoModify.swift in Sources */,
 				4B623FA71F46E1210032D7D1 /* RecipeStepCreate.swift in Sources */,
+				3F65B1771F4CA043009CBD7A /* BookMarkListCell.swift in Sources */,
 				3FD86A841F48C8E00012C3F8 /* DTTextField.swift in Sources */,
+				4B128A791F4C52E100BA6A54 /* SearchResultCellTableViewCell.swift in Sources */,
 				4B623FA51F46E1210032D7D1 /* AppDelegate.swift in Sources */,
+				4B128A771F4C52BA00BA6A54 /* SearchResult.swift in Sources */,
 				4B623FB91F46E4910032D7D1 /* RecipeCreate.swift in Sources */,
+				3F65B1741F4CA017009CBD7A /* BookMarkList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,22 +11,28 @@ import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
 import FBSDKCoreKit
-
+import Toaster
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    // MARK: var, let
     var data: JSON = JSON.init(rawValue: [])!
+    let emailMessage            = "이메일을 입력해주세요"
+    let passwordMessage         = "패스워드를 입력해주세요"
+    
+    // MARK: Outlet
+    //
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var emilInputTextField: DTTextField!
     @IBOutlet var passwordIntputTextField: DTTextField!
-    
-    let emailMessage            = "이메일을 입력해주세요"
-    let passwordMessage         = "패스워드를 입력해주세요"
-   
-    
+    @IBOutlet var loginB: UIButton!
+    @IBOutlet var signupB: UIButton!
     
     @IBAction func login(_ sender: UIButton){
-        guard validateData() else { return }
+        guard let email = emilInputTextField.text else { return }
+        guard let password = passwordIntputTextField.text else { return }
         
+        loginUserData(email: email, password: password)
     }
     
     override func viewDidLoad() {
@@ -35,21 +41,27 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         textFieldBorderColor()
         
     }
-    
+    // MARK: Facebook LoginButton
     func facebookSigninButton(){
         
         let loginButton = FBSDKLoginButton()
-        view.addSubview(loginButton)
+        loginButton.layer.borderColor = UIColor.black.cgColor
+        loginButton.layer.borderWidth = 0.5
+        loginButton.layer.cornerRadius = 10
         loginButton.frame = CGRect(x: 41, y: 350, width: 300, height: 50)
         
         loginButton.delegate = self
         loginButton.readPermissions = ["email","public_profile"]
-
+        
+        
+        view.addSubview(loginButton)
     }
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("did log out facebook")
     }
     
+    // MARK: Facebook login get Token
+    //
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         
         if error != nil {
@@ -58,13 +70,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
         let accessToken = FBSDKAccessToken.current()
- 
+        
         guard let accessTokenString = accessToken?.tokenString else { return }
         print("페이스북토큰:   ",accessTokenString)
         self.faceBookSignin(token: accessTokenString)
     }
     
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -76,15 +88,13 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
-    }
-    
-    
-    func textFieldBorderColor(){
-        emilInputTextField.borderColor = .clear
-        passwordIntputTextField.borderColor = .clear
+        
+        self.emilInputTextField.text = ""
+        self.passwordIntputTextField.text = ""
     }
 }
-
+// MARK: Facebook Login
+//
 extension LoginViewController {
     func faceBookSignin(token: String){
         let url = "http://pickycookbook.co.kr/api/member/facebook-login/"
@@ -110,12 +120,13 @@ extension LoginViewController {
                 self.present(nextViewController, animated: true, completion: nil)
                 
             case .failure(let error):
-                self.alert("실패")
+                Toast(text: "네트워크에러").show()
                 print(error)
             }
         }
     }
-    
+    // MARK: Email Login
+    //
     func loginUserData(email: String, password: String) {
         
         let url = "http://pickycookbook.co.kr/api/member/login/"
@@ -123,28 +134,38 @@ extension LoginViewController {
         let headers: HTTPHeaders = ["Content-Type":"application/json"]
         let call = Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers)
         
-        call.validate().responseJSON { (response) in
+        call.responseJSON { (response) in
             
             switch response.result {
             case .success(let value):
                 
                 let json = JSON(value)
-
-                // UserDefaults 에 토큰 저장
-                let currentUserToken = json["token"].stringValue
-                UserDefaults.standard.set(currentUserToken, forKey: "token")
-                let currentUserPk = json["pk"].intValue
-                UserDefaults.standard.set(currentUserPk, forKey: "userPK")
-                
-                guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mypage") else {
-                    return
+                print(json)
+                if !(json["email_empty"].stringValue.isEmpty) {
+                    Toast(text: "email을 입력해주세요").show()
+                } else if !(json["empty_password1"].stringValue.isEmpty) {
+                    Toast(text: "password를 입력해주세요").show()
+                } else if !(json["empty_error"].stringValue.isEmpty) {
+                    Toast(text: "email과 password를 입력해주세요").show()
+                } else if !(json["login_error"].stringValue.isEmpty) {
+                    Toast(text: "email 또는 비밀번호가 맞지 않습니다").show()
+                } else {
+                    // UserDefaults 에 토큰 저장
+                    let currentUserToken = json["token"].stringValue
+                    UserDefaults.standard.set(currentUserToken, forKey: "token")
+                    let currentUserPk = json["pk"].intValue
+                    UserDefaults.standard.set(currentUserPk, forKey: "userPK")
+                    
+                    guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "mypage") else {
+                        return
+                    }
+                    self.present(nextViewController, animated: true, completion: nil)
                 }
-                self.present(nextViewController, animated: true, completion: nil)
+                
                 
                 
             case .failure(let error):
-                
-                self.alert("이메일 또는 비밀번호를 확인하세요")
+                Toast(text: "네트워크에러").show()
                 print(error)
                 
             }
@@ -152,7 +173,8 @@ extension LoginViewController {
     }
 }
 
-
+// MARK: 키보드
+//
 extension LoginViewController {
     
     func keyboardWillShow(notification:Notification) {
@@ -164,24 +186,26 @@ extension LoginViewController {
         scrollView.contentInset = .zero
     }
     
-    func validateData() -> Bool {
-        
-        guard !emilInputTextField.text!.isEmptyStr else {
-            emilInputTextField.showError(message: emailMessage)
-            return false
-        }
-        
-        guard !passwordIntputTextField.text!.isEmptyStr else {
-            passwordIntputTextField.showError(message: passwordMessage)
-            return false
-        }
-        loginUserData(email: emilInputTextField.text!, password: passwordIntputTextField.text!)
-        
-        
-        return true
-    }
-
+    //    func validateData() -> Bool {
+    //
+    //        guard !emilInputTextField.text!.isEmptyStr else {
+    //            emilInputTextField.showError(message: emailMessage)
+    //            return false
+    //        }
+    //
+    //        guard !passwordIntputTextField.text!.isEmptyStr else {
+    //            passwordIntputTextField.showError(message: passwordMessage)
+    //            return false
+    //        }
+    //        loginUserData(email: emilInputTextField.text!, password: passwordIntputTextField.text!)
+    //
+    //
+    //        return true
+    //    }
+    
 }
+// MARK: Alert custom
+//
 extension LoginViewController {
     func alert(_ message: String, completion: (()->Void)? = nil) {
         DispatchQueue.main.async {
@@ -194,4 +218,26 @@ extension LoginViewController {
         }
     }
 }
-
+// MARK: Border setting
+//
+extension LoginViewController {
+    func textFieldBorderColor(){
+        
+        emilInputTextField.layer.borderColor = UIColor.black.cgColor
+        emilInputTextField.layer.borderWidth = 0.5
+        emilInputTextField.layer.cornerRadius = 10
+        
+        passwordIntputTextField.layer.borderColor = UIColor.black.cgColor
+        passwordIntputTextField.layer.borderWidth = 0.5
+        passwordIntputTextField.layer.cornerRadius = 10
+        
+        loginB.layer.borderColor = UIColor.black.cgColor
+        loginB.layer.borderWidth = 0.5
+        loginB.layer.cornerRadius = 10
+        
+        signupB.layer.borderColor = UIColor.black.cgColor
+        signupB.layer.borderWidth = 0.5
+        signupB.layer.cornerRadius = 10
+    }
+    
+}
