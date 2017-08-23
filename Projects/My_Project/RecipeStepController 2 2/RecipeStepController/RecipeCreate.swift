@@ -38,6 +38,9 @@ class RecipeCreate: UIViewController, UINavigationControllerDelegate, UIImagePic
     @IBOutlet var selectPicture: UIButton!
     @IBOutlet var inputStep: UIButton!
     
+    @IBAction func cancelRecipe(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     // MARK: 사진선택
     //
     @IBAction func pictureSelect(_ sender: UIButton){

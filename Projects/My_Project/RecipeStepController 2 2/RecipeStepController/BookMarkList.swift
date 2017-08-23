@@ -17,7 +17,7 @@ class BookMarkList: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
         fetchBookMakrData()
         
     }
@@ -27,9 +27,12 @@ class BookMarkList: UIViewController, UITableViewDelegate, UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
-//        tableView.reloadData()
+        tableView.reloadData()
     }
     
+    @IBAction func ok(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
 extension BookMarkList {
@@ -41,16 +44,58 @@ extension BookMarkList {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarklist") as? BookMarkListCell
         
-        let recipeTitle = self.data[indexPath.row]["recipe"].intValue
+        let recipeTitle = self.data[indexPath.row]["recipe_title"].stringValue
+        let recipePK = self.data[indexPath.row]["recipe"].intValue
         let recipeMemo = self.data[indexPath.row]["memo"].stringValue
+        UserDefaults.standard.set(recipePK, forKey: "recipePKDetail")
         print(recipeMemo)
-        //print(recipeTitle)
-        cell?.recipeTitle.text = "\(recipeTitle)"
+        print("UserDefaults                       :",UserDefaults.standard.object(forKey: "recipePKDetail") as! Int)
+        
+        cell?.recipeTitle.text = recipeTitle
         cell?.recipeMemo.text = recipeMemo
         
         return cell!
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            var memo = self.data.arrayValue
+            
+            print(memo)
+            
+            
+            memo.remove(at: (indexPath as NSIndexPath).row)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }else if editingStyle == .insert {
+            
+        }
+    }
     
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "삭제"
+        
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        var memo = self.data.arrayValue
+        
+       
+        let itemImageToMove = memo[(sourceIndexPath as NSIndexPath).row]
+        
+        memo.remove(at: (sourceIndexPath as NSIndexPath).row)
+        
+        memo.insert(itemImageToMove, at: (destinationIndexPath as NSIndexPath).row)
+        
+        
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: editing)
+        tableView.setEditing(editing, animated: editing)
+    }
 }
 
 extension BookMarkList {
@@ -65,6 +110,7 @@ extension BookMarkList {
         call.responseJSON { (response) in
             switch response.result {
             case .success(let value):
+                
                 self.data = JSON(value)
                 self.tableView.reloadData()
                 print(self.data)

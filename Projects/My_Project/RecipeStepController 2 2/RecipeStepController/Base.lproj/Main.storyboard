@@ -224,8 +224,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST7-Ug-fmI">
                                         <rect key="frame" x="37" y="284" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="사진선택"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="사진선택">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="pictureSelect:" destination="hNz-ic-9SJ" eventType="touchUpInside" id="jmh-BU-eBH"/>
                                         </connections>
@@ -233,12 +235,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txy-bN-mDS">
                                         <rect key="frame" x="37" y="356" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="레시피 스텝입력">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="nextStep:" destination="hNz-ic-9SJ" eventType="touchUpInside" id="rd4-Al-9Xb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evT-NO-vw7">
+                                        <rect key="frame" x="37" y="433" width="300" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="취소">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelRecipe:" destination="hNz-ic-9SJ" eventType="touchUpInside" id="c0l-iQ-8DR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -279,7 +292,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ct-qo-4sf">
                                         <rect key="frame" x="41" y="412" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="로그인"/>
                                         <connections>
                                             <action selector="login:" destination="ooE-YE-X0g" eventType="touchUpInside" id="0QX-bi-l1a"/>
@@ -288,7 +301,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8s3-Jl-QQO">
                                         <rect key="frame" x="41" y="483" width="300" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="회원가입"/>
                                         <connections>
                                             <segue destination="FuW-ee-IYc" kind="presentation" id="Jz4-hG-A2K"/>
@@ -566,7 +579,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="55e-62-qn7" id="nMI-9v-K5H">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-1f-EQq">
@@ -587,7 +600,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="recipeMemo" destination="RBD-qj-qRE" id="PLz-nY-g3Q"/>
-                                            <outlet property="recipeTitle" destination="sdD-1f-EQq" id="Rzm-zq-u2x"/>
+                                            <outlet property="recipeTitle" destination="sdD-1f-EQq" id="hDx-Jy-Qv4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -605,14 +618,20 @@
                             <constraint firstItem="nPA-19-PYX" firstAttribute="centerY" secondItem="YFh-lt-9tv" secondAttribute="centerY" id="dEA-rR-xdA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MHw-Bx-29h"/>
+                    <navigationItem key="navigationItem" id="MHw-Bx-29h">
+                        <barButtonItem key="rightBarButtonItem" title="확인" id="Mmj-Q0-gEl">
+                            <connections>
+                                <action selector="ok:" destination="UfZ-Bh-mdi" id="jVb-CH-29b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nPA-19-PYX" id="ZqE-AE-oc6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0j-5a-kqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2728.8000000000002" y="1189.6551724137933"/>
+            <point key="canvasLocation" x="2594" y="1189"/>
         </scene>
         <!--Search Result-->
         <scene sceneID="jq1-hz-btg">

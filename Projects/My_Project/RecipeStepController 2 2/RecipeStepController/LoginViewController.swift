@@ -224,20 +224,24 @@ extension LoginViewController {
     func textFieldBorderColor(){
         
         emilInputTextField.layer.borderColor = UIColor.black.cgColor
-        emilInputTextField.layer.borderWidth = 0.5
+        emilInputTextField.layer.borderWidth = 0.1
         emilInputTextField.layer.cornerRadius = 10
         
         passwordIntputTextField.layer.borderColor = UIColor.black.cgColor
-        passwordIntputTextField.layer.borderWidth = 0.5
+        passwordIntputTextField.layer.borderWidth = 0.1
         passwordIntputTextField.layer.cornerRadius = 10
         
-        loginB.layer.borderColor = UIColor.black.cgColor
+        loginB.layer.borderColor = UIColor.clear.cgColor
         loginB.layer.borderWidth = 0.5
         loginB.layer.cornerRadius = 10
+//        loginB.layer.backgroundColor = UIColor.aqua.cgColor
+        loginB.setTitleColor(UIColor.white, for: .normal)
         
-        signupB.layer.borderColor = UIColor.black.cgColor
+        
+        signupB.layer.borderColor = UIColor.clear.cgColor
         signupB.layer.borderWidth = 0.5
         signupB.layer.cornerRadius = 10
+        signupB.setTitleColor(UIColor.white, for: .normal)
     }
     
 }
