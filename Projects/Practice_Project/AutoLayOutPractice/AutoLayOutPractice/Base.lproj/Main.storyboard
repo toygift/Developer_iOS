@@ -18,36 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwW-Hq-QF3">
-                                <rect key="frame" x="20" y="40" width="158" height="338"/>
+                                <rect key="frame" x="20" y="40" width="158" height="508"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="ezb-Zb-MZO"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ard-7y-Sak">
-                                <rect key="frame" x="20" y="398" width="280" height="150"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="IPR-ls-HPW"/>
+                                    <constraint firstAttribute="width" constant="158" id="R8S-Ae-rVy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXd-kD-Wcf">
-                                <rect key="frame" x="198" y="40" width="102" height="338"/>
+                                <rect key="frame" x="198" y="40" width="102" height="508"/>
                                 <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nXd-kD-Wcf" firstAttribute="leading" secondItem="NwW-Hq-QF3" secondAttribute="trailing" constant="20" id="2so-cw-XXt"/>
-                            <constraint firstItem="NwW-Hq-QF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5Hp-Bs-t2X"/>
-                            <constraint firstItem="NwW-Hq-QF3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Fo-m0-xqj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nXd-kD-Wcf" secondAttribute="trailing" constant="20" id="Cqj-Ng-b0a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nXd-kD-Wcf" secondAttribute="trailing" constant="20" id="Fr3-zB-aIt"/>
-                            <constraint firstItem="nXd-kD-Wcf" firstAttribute="height" secondItem="NwW-Hq-QF3" secondAttribute="height" id="K5F-wv-knJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ard-7y-Sak" secondAttribute="bottom" constant="20" id="Sm5-h1-hfK"/>
-                            <constraint firstItem="ard-7y-Sak" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kw5-QM-ize"/>
-                            <constraint firstItem="ard-7y-Sak" firstAttribute="top" secondItem="NwW-Hq-QF3" secondAttribute="bottom" constant="20" id="wKd-0T-M9z"/>
+                            <constraint firstItem="NwW-Hq-QF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="HpE-QU-mAC"/>
+                            <constraint firstItem="NwW-Hq-QF3" firstAttribute="height" secondItem="nXd-kD-Wcf" secondAttribute="height" id="UYt-cV-1Zv"/>
+                            <constraint firstItem="NwW-Hq-QF3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bNc-Nc-AAI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NwW-Hq-QF3" secondAttribute="bottom" constant="20" id="gDt-aB-yFr"/>
+                            <constraint firstItem="nXd-kD-Wcf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nQr-wk-6m6"/>
+                            <constraint firstItem="nXd-kD-Wcf" firstAttribute="leading" secondItem="NwW-Hq-QF3" secondAttribute="trailing" constant="20" id="v3B-ih-26t"/>
                             <constraint firstItem="nXd-kD-Wcf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="xTn-wu-2Xr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ard-7y-Sak" secondAttribute="trailing" constant="20" id="xjK-Wf-qGi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
